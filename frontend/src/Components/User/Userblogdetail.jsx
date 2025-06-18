@@ -33,7 +33,7 @@ const UserBlogDetail = () => {
 
     const handleLike = async () => {
         try {
-            const res = await axios.post(`http://localhost:5000/api/blog/like/${id}`, {}, {
+            const res = await axios.post(`https://blogspot-8l4s.onrender.com/api/blog/like/${id}`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setBlog(prev => ({ ...prev, likes: res.data.likes }));
@@ -46,7 +46,7 @@ const UserBlogDetail = () => {
     const handleComment = async () => {
         if (!commentText.trim()) return;
         try {
-            const res = await axios.post(`http://localhost:5000/api/blog/comments/${id}`, {
+            const res = await axios.post(`https://blogspot-8l4s.onrender.com/api/blog/comments/${id}`, {
                 text: commentText,
             }, {
                 headers: { Authorization: `Bearer ${token}` },
