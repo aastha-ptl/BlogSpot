@@ -41,7 +41,7 @@ const UpdateBlog = () => {
         ? blog.imageUrl.split('/').pop()
         : blog.imageUrl;
 
-      setPreviewImageUrl(`http://localhost:5000/blog-images/${cleanImagePath}`);
+      setPreviewImageUrl(`https://blogspot-8l4s.onrender.com/blog-images/${cleanImagePath}`);
     } catch (err) {
       console.error('Error fetching blog:', err);
     }
@@ -76,7 +76,7 @@ const UpdateBlog = () => {
       setPreviewImageUrl(URL.createObjectURL(file));
     } else {
       setFormData((prev) => ({ ...prev, image: null }));
-      setPreviewImageUrl(`http://localhost:5000/blog-images/${formData.existingImage}`);
+      setPreviewImageUrl(`https://blogspot-8l4s.onrender.com/blog-images/${formData.existingImage}`);
       setMessage('Please select a valid image file.');
     }
   };
@@ -93,7 +93,7 @@ const UpdateBlog = () => {
       if (formData.image) form.append('image', formData.image);
 
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/blog/${id}`, form, {
+      await axios.put(`https://blogspot-8l4s.onrender.com/api/blog/${id}`, form, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

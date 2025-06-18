@@ -160,7 +160,7 @@ const BlogList = () => {
                     title: blog.title,
                     description: blog.description,
                     imageUrl: blog.image
-                      ? `http://localhost:5000/blog-images/${blog.image}`
+                      ? `https://blogspot-8l4s.onrender.com/blog-images/${blog.image}`
                       : Blogimage,
                     likes: blog.likes || 0,
                     comments: blog.comments || [],
