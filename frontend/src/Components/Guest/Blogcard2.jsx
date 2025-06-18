@@ -36,7 +36,7 @@ const BlogCard = ({ blog }) => {
 
   try {
     const res = await axios.patch(
-      `http://localhost:5000/api/blog/likes/${blog.id}`,
+      `https://blogspot-8l4s.onrender.com/api/blog/likes/${blog.id}`,
       {},
       {
         headers: {

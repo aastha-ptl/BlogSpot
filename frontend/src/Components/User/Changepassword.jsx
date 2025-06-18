@@ -12,7 +12,7 @@ const ChangePassword = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.put(
-        'http://localhost:5000/api/user/change-password',
+        'https://blogspot-8l4s.onrender.com/api/user/change-password',
         { currentPassword, newPassword },
         {
           headers: { Authorization: `Bearer ${token}` },

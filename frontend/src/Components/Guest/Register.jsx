@@ -29,7 +29,7 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/user/register', {
+      const res = await axios.post('https://blogspot-8l4s.onrender.com/api/user/register', {
         name: form.name,
         email: form.email,
         password: form.password,

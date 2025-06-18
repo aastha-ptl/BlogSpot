@@ -11,7 +11,7 @@ const GuestBlogDetail = () => {
  useEffect(() => {
   const fetchBlog = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/blog/gusetview/${id}`);
+      const res = await axios.get(`https://blogspot-8l4s.onrender.com/api/blog/gusetview/${id}`);
       setBlog(res.data);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {

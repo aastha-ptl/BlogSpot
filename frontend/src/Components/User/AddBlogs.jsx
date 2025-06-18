@@ -59,7 +59,7 @@ const AddBlog = () => {
       if (formData.image) form.append('image', formData.image)
 
       const token = localStorage.getItem('token')
-      await axios.post('http://localhost:5000/api/blog', form, {
+      await axios.post('https://blogspot-8l4s.onrender.com/api/blog', form, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

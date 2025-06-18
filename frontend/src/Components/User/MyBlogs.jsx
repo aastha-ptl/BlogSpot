@@ -16,7 +16,7 @@ const MyBlogs = () => {
     const fetchMyBlogs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/blog/myblogs', {
+        const res = await axios.get('https://blogspot-8l4s.onrender.com/api/blog/myblogs', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -46,7 +46,7 @@ const MyBlogs = () => {
       const token = localStorage.getItem('token');
 
       // Call delete API
-      await axios.delete(`http://localhost:5000/api/blog/${id}`, {
+      await axios.delete(`https://blogspot-8l4s.onrender.com/api/blog/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

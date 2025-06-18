@@ -18,7 +18,7 @@ const Login = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/user/login', form);
+      const res = await axios.post('https://blogspot-8l4s.onrender.com/api/user/login', form);
 
       const { token, user } = res.data;
 

@@ -21,7 +21,7 @@ const UpdateBlog = () => {
   const fetchBlog = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://localhost:5000/api/blog/blogs/${id}`, {
+      const res = await axios.get(`https://blogspot-8l4s.onrender.com/api/blog/blogs/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const blog = res.data;

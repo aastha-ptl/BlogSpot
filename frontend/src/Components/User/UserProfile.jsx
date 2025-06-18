@@ -10,7 +10,7 @@ const UserProfile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/user/profile', {
+        const res = await axios.get('https://blogspot-8l4s.onrender.com/api/user/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

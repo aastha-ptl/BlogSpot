@@ -36,7 +36,7 @@ const BlogList = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/blog');
+        const res = await axios.get('https://blogspot-8l4s.onrender.com/api/blog');
         setAllBlogs(res.data);
         setFilteredBlogs(res.data);
       } catch (err) {

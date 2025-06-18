@@ -18,7 +18,7 @@ const UserBlogDetail = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/blog/${id}/secure`, {
+                const res = await axios.get(`https://blogspot-8l4s.onrender.com/api/blog/${id}/secure`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setBlog(res.data);
